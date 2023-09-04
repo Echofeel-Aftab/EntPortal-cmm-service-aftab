@@ -1,0 +1,369 @@
+{
+  "info": {
+    "_postman_id": "8c4726da-3892-43a3-922e-759520a18fad",
+    "name": "CMM_Table_Type",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "http://localhost:8000/cmm/queryPrintDepositSlip/saveDataPaySlip",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "default"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"pcarea\": \"BOM\",\r\n\"pnentry_no\": \"123455\",\r\n\"pctranssrno\": \"4590829\",\r\n\"pcdetailsrno\": \"\",\r\n\"pdcollrcptdt\": \"15-Apr-23\",\r\n\"pcdepositsrno\": \"2818019\",\r\n\"pcserialno\": \"135288558\",\r\n\"pcpaytype\": \"ACSS\",\r\n\"pccolltype\": \"CS\",\r\n\"pccollrcptno\": \"112233\",\r\n\"pcawbno\": \"65156242771\",\r\n\"pcprodcode\": \"A\",\r\n\"pcorgscrcd\": \"CGM\",\r\n\"pninvamt\": \"\",\r\n\"pnoutstandamt\": \"1000\",\r\n\"pncollamt\": \"500\",\r\n\"pntdsamt\": \"0\",\r\n\"pcchequeno\": \"\",\r\n\"pdcheqdate\": \"\",\r\n\"pcbanknm\": \"\",\r\n\"pcbankbranchnm\": \"\",\r\n\"pccollloccd\": \"CGM\",\r\n\"pccloccode\": \"CGM\",\r\n\"pccollempcd\": \"100481\",\r\n\"pcremarks\": \"TEST\",\r\n\"ok\": \"\",\r\n\"pncrdramt\": \"0\",\r\n\"pctranstype\": \"\",\r\n\"pcreasoncd\":[\"\"],\r\n\"pnshortcoll\":[\"\"]\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/cmm/queryPrintDepositSlip/saveDataPaySlip",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "cmm",
+            "queryPrintDepositSlip",
+            "saveDataPaySlip"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8000/cmm/cashDepositApproval/saveApproval",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "default"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"pcpayslipno\":[\"PVM2403231\",\"PVM2403232\"],\r\n\"pdpayslipdt\":[\"15-Apr-23\", \"15-Apr-23\"],\r\n\"pcchk\":[\"Y\",\"Y\"],\r\n\"allchk\": \"\",\r\n\"pcapprovedby\": \"100481\",\r\n\"mccollloccd\":\"A\",\r\n\"mccollempcd\":\"B\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/cmm/cashDepositApproval/saveApproval",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "cmm",
+            "cashDepositApproval",
+            "saveApproval"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8000/cmm/queryPrintDepositSlip/saveActualDataPaySlip",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "default"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"pccollloccd\": \"ADR\",\r\n\"pccollempcd\": \"125919\",\r\n\"pccloccode\": \"ADR\",\r\n\"pdpayslipdt\": \"15-Apr-23\",\r\n\"pcpayslipno\": \"PVM2403231\",\r\n\"pntotaldepoamt\": \"1000\",\r\n\"pcbankdesc\": \"HDFC-DEL\",\r\n\"pcaccno\": \"\",\r\n\"ptotamtcurr\": \"1000\",\r\n\"pmccolltype\": \"CS\",\r\n\"pmcpaytype\": \"ACSS\",\r\n\"pcawbno\":[\"65156242771\",\"62357043744\"],\r\n\"pcprodcode\":[\"A\",\"A\"],\r\n\"pcorgscrcd\":[\"ACSS\",\"ACSS\"],\r\n\"pncollamt\":[\"55\", \"400\"],\r\n\"pcserialno\":[\"43212345\",\"324223322\"],\r\n\"submit\": \"\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/cmm/queryPrintDepositSlip/saveActualDataPaySlip",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "cmm",
+            "queryPrintDepositSlip",
+            "saveActualDataPaySlip"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8000/cmm/collection/query",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "default"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"pdquerydt1\":\"14-Apr-23\",\r\n\"pcgen\":\"\",\r\n\"pcawbno\":\"62357043744\",\r\n\"mccollempcd\":\"100481\",\r\n\"mccollloccd\":\"ADR\",\r\n\"mcdcrrole\":\"00\",\r\n\"pregion\":\"WEST1\",\r\n\"pclvlarea\":[\"ADR\"]\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/cmm/collection/query",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "cmm",
+            "collection",
+            "query"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8000/cmm/user/createuser",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "default"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"pcemplcode\":[\"100481\",\"83517\"],\r\n\"pcrole\":[\"00\",\"00\"],\r\n\"pdexpitydt\":[\"\"],\r\n\"pclocaccess\":[\"\"],\r\n\"pcrole1\": \"\",\r\n\"pcrole2\": \"\",\r\n\"pcrole3\": \"09\",\r\n\"pcrole4\": \"\",\r\n\"pcrole5\": \"\",\r\n\"pcrole6\": \"\",\r\n\"pcrole7\": \"\",\r\n\"pcrole8\": \"\",\r\n\"pcrole9\": \"\",\r\n\"pcrolea\": \"\",\r\n\"pcroleb\": \"\",\r\n\"pcrolec\": \"\",\r\n\"pcroled\": \"\",\r\n\"pcrolee\": \"\",\r\n\"pclose\": \"\",\r\n\"psubmit\": \"\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/cmm/user/createuser",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "cmm",
+            "user",
+            "createuser"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8000/collect/entry/saveData",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "default"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"pcarea\": \"GPD\",\r\n\"pnentry_no\": \"53627074\",\r\n\"pctranssrno\": \"000008809282\",\r\n\"pcdetailsrno\": \"\",\r\n\"pdcollrcptdt\": \"18-DEC-18\",\r\n\"pcdepositsrno\": \"1\",\r\n\"pcserialno\": \"2\",\r\n\"pcpaytype\": \"ACSS\",\r\n\"pccolltype\": \"CS\",\r\n\"pccollrcptno\": \"\",\r\n\"pcawbno\": \"70488835056\",\r\n\"pcprodcode\": \"A\",\r\n\"pcorgscrcd\": \"LPR\",\r\n\"pninvamt\": \"900\",\r\n\"pnoutstandamt\": \"550\",\r\n\"pncollamt\": \"80\",\r\n\"pntdsamt\": \"300\",\r\n\"pcchequeno\": \"\",\r\n\"pdcheqdate\": \"\",\r\n\"pcbanknm\": \"\",\r\n\"pcbankbranchnm\": \"BOM\",\r\n\"pccollloccd\": \"\",\r\n\"pccloccode\": \"\",\r\n\"pccollempcd\": \"\",\r\n\"pcremarks\": \"\",\r\n\"ok\": \"\",\r\n\"pncrdramt\": \"\",\r\n\"pctranstype\": \"\",\r\n\"pcreasoncd\":[\"A\", \"B\"],\r\n\"pnshortcoll\":[\"B\", \"C\"]\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/collect/entry/saveData",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "collect",
+            "entry",
+            "saveData"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8000/collect/entry/submitDetailAwbno",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "default"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"pctranssrno\": \"\",\r\n\"pccolltype\": \"\",\r\n\"pcpaytype\": \"\",\r\n\"pccollrcptno\": \"\",\r\n\"pdcollrcptdt\": \"\",\r\n\"pntotalcollamt\": \"\",\r\n\"pccollloccd\": \"\",\r\n\"pccollempcd\": \"\",\r\n\"pccloccode\": \"\",\r\n\"psubmit\": \"\",\r\n\"paddbut\": \"\",\r\n\"pcawbno\":[\"\"],\r\n\"pcprodcode\":[\"\"],\r\n\"pcorgscrcd\":[\"\"],\r\n\"pncollamt\":[\"\"],\r\n\"pcremarks\":[\"\"],\r\n\"pcdepositsrno\":[\"\"],\r\n\"pcbanknm\":[\"\"],\r\n\"pcbankbranchnm\":[\"\"],\r\n\"pcchequeno\":[\"\"],\r\n\"pdcheqdate\":[\"\"]\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/collect/entry/submitDetailAwbno",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "collect",
+            "entry",
+            "submitDetailAwbno"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8000/collect/entry/submitDetailInvoice",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "default"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"pctranssrno\": \"\",\r\n\"pccolltype\": \"\",\r\n\"pcpaytype\": \"\",\r\n\"pccollrcptno\": \"\",\r\n\"pdcollrcptdt\": \"\",\r\n\"pntotalcollamt\": \"\",\r\n\"pccollloccd\": \"\",\r\n\"pccollempcd\": \"\",\r\n\"pccloccode\": \"\",\r\n\"psubmit\": \"\",\r\n\"paddbut\": \"\",\r\n\"pcbillno\":[\"\"],\r\n\"pcdepositsrno\":[\"\"],\r\n\"pcarea\":[\"\"],\r\n\"pccustcode\":[\"\"],\r\n\"pncollamt\":[\"\"],\r\n\"pdbilldt\":[\"\"],\r\n\"pninvamt\":[\"\"],\r\n\"pnoutstandamt\":[\"\"],\r\n\"pntdsamt\":[\"\"],\r\n\"pnshortamt\":[\"\"],\r\n\"pcreasoncd\":[\"\"],\r\n\"pnshortcoll\":[\"\"],\r\n\"pcremarks\":[\"\"],\r\n\"pcbanknm\":[\"\"],\r\n\"pcbankbranchnm\":[\"\"],\r\n\"pcchequeno\":[\"\"],\r\n\"pdcheqdate\":[\"\"],\r\n\"pcdetailsrno\":[\"\"]\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/collect/entry/submitDetailInvoice",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "collect",
+            "entry",
+            "submitDetailInvoice"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8000/cmm/bulk/dobulksave",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "default"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"pcawbno\":[\"\"],\r\n\"pdpudeldt\":[\"\"],\r\n\"pcpaytype\":[\"\"],\r\n\"pncollval\":[\"\"],\r\n\"pncollamt\":[\"\"],\r\n\"pntdsamt\":[\"\"],\r\n\"pccashmemno\":[\"\"],\r\n\"pccollmd\":[\"\"],\r\n\"pcchk\":[\"\"],\r\n\"pcrmks\":[\"\"],\r\n\"pcchkno\":[\"\"],\r\n\"pdchkdt\":[\"\"],\r\n\"pcbnknm\":[\"\"],\r\n\"pcbrnnm\":[\"\"],\r\n\"pcprodcode\":[\"\"],\r\n\"pcorgscrcd\":[\"\"],\r\n\"pcoutamt\":[\"\"],\r\n\"pcchk1\":[\"\"],\r\n\"pccollval1\":[\"\"],\r\n\"pcpudelemplcd\": \"\",\r\n\"pdcolldt\": \"\",\r\n\"allchk\": \"\",\r\n\"pctranid\": \"\",\r\n\"pgsaarea\": \"\",\r\n\"pgsacode\": \"\",\r\n\"mccollloccd\": \"\",\r\n\"mccollempcd\": \"\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/cmm/bulk/dobulksave",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "cmm",
+            "bulk",
+            "dobulksave"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8000/cmm/bulk/dobulksaveinv",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "default"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"pcbillno\":[\"\"],\r\n\"pdbilldt\":[\"\"],\r\n\"pcentryno\":[\"\"],\r\n\"pninvamt\":[\"\"],\r\n\"pnoutamt\":[\"\"],\r\n\"pncollamt\":[\"\"],\r\n\"pntdsamt\":[\"\"],\r\n\"pccashmemno\":[\"\"],\r\n\"pcchk\":[\"\"],\r\n\"pcrmks\":[\"\"],\r\n\"pctotshrtamt\":[\"\"],\r\n\"pcchk1\":[\"\"],\r\n\"pcarea\": \"\",\r\n\"pccustcode\": \"\",\r\n\"pinvoice\": \"\",\r\n\"pdcolldt\": \"\",\r\n\"pccolltype\": \"\",\r\n\"pcpaytype\": \"\",\r\n\"pcchqno\": \"\",\r\n\"pdchqdt\": \"\",\r\n\"pcbanknm\": \"\",\r\n\"pcbranchnm\": \"\",\r\n\"mccollloccd\": \"\",\r\n\"mccollempcd\": \"\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/cmm/bulk/dobulksaveinv",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "cmm",
+            "bulk",
+            "dobulksaveinv"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

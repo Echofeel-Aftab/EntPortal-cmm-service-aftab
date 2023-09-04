@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <property name="LOGS" value="./logs"/>
+    <appender name="Console"
+              class="ch.qos.logback.core.ConsoleAppender">
+        <encoder
+                class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+            <!-- <encoder class="net.logstash.logback.encoder.LogstashEncoder"> -->
+            <layout class="ch.qos.logback.contrib.json.classic.JsonLayout">
+                <jsonFormatter
+                        class="ch.qos.logback.contrib.jackson.JacksonJsonFormatter">
+                    <!--<prettyPrint>true</prettyPrint>-->
+                </jsonFormatter>
+                <timestampFormat>yyyy-MM-dd' 'HH:mm:ss.SSS</timestampFormat>
+                <appendLineSeparator>true</appendLineSeparator>
+
+            </layout>
+        </encoder>
+    </appender>
+    <appender name="RollingFile"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOGS}/dhl-caress-service-test.log</file>
+        <!-- <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>[%d{yyyy-MM-dd'T'HH:mm:ss.sss'Z'}] [%C] [%t] [%L] [%-5p] %X{correlationId}
+            %m%n</pattern> </encoder> -->
+        <encoder
+                class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+            <!-- <encoder class="net.logstash.logback.encoder.LogstashEncoder"> -->
+            <layout class="ch.qos.logback.contrib.json.classic.JsonLayout">
+                <jsonFormatter
+                        class="ch.qos.logback.contrib.jackson.JacksonJsonFormatter">
+                    <!--<prettyPrint>true</prettyPrint>-->
+                </jsonFormatter>
+                <timestampFormat>yyyy-MM-dd' 'HH:mm:ss.SSS</timestampFormat>
+                <appendLineSeparator>true</appendLineSeparator>
+
+            </layout>
+        </encoder>
+        <rollingPolicy
+                class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOGS}/archived/dhl-caress-service-test-%d{yyyy-MM-dd}.%i.log
+            </fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+    <!-- LOG everything at INFO level -->
+    <root level="info">
+        <appender-ref ref="RollingFile"/>
+        <appender-ref ref="Console"/>
+    </root>
+</configuration>
